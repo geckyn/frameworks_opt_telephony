@@ -162,7 +162,7 @@ public class SubscriptionControllerTest extends TelephonyTest {
         mCallingPackage = mContext.getOpPackageName();
 
         doReturn(1).when(mProxyController).getMaxRafSupported();
-        mContextFixture.putIntArrayResource(com.android.internal.R.array.sim_colors, new int[]{5});
+        mContextFixture.putIntArrayResource(com.android.internal.R.array.sim_colors, new int[]{19});
 
         mSubscriptionControllerUT.getInstance().updatePhonesAvailability(new Phone[]{mPhone});
         mMockContentResolver = (MockContentResolver) mContext.getContentResolver();

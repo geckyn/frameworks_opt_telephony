@@ -3192,6 +3192,7 @@ public class ImsPhoneCallTracker extends CallTracker implements ImsPullCall {
                 ImsPhoneConnection oldConnection = findConnection(callInfo.first);
                 if (oldConnection == null) {
                     sendCallStartFailedDisconnect(callInfo.first, callInfo.second);
+                    break;
                 }
                 mForegroundCall.detach(oldConnection);
                 removeConnection(oldConnection);
